@@ -18,12 +18,12 @@ This command will prompt for the template parameters.
 
 ### Parameters
 
-| Template parameters    | Default value                                            | Description                                                        |
-|------------------------|----------------------------------------------------------|--------------------------------------------------------------------|
-| project_name           | project                                                  | The name of the root directory of the new Inmanta project.       |
-| project_description    |                                                          | A description of the new Inmanta project.                        |
-| author                 | Inmanta                                                  | The author to be mentioned in the project.yml file                    |
-| author_email           | code@inmanta.com                                         | The e-mail address of the author.                                  |
-| license                | ASL 2.0                                                  | The License of this new Inmanta project.                         |
-| copyright              | ${year} Inmanta                                          | The owner of the copyright of the project.                       |
-| repo_url           | https://github.com/inmanta/ | The URL where modules can be downloaded. |
+| Template parameters        | Default value               | Description                                                        |
+|----------------------------|-----------------------------|--------------------------------------------------------------------|
+| module_name                | test_module                 | The name of the new inmanta module.                                |
+| module_description         |                             | A description of the new Inmanta module.                           |
+| author                     | Inmanta                     | The author to be mentioned in the project.yml file                 |
+| author_email               | code@inmanta.com            | The e-mail address of the author.                                  |
+| license                    | ASL 2.0                     | The License of this new Inmanta module.                            |
+| copyright                  | ${year} Inmanta             | The owner of the copyright of the project.                         |
+| minimal_compiler_version   | 2019.3                      | The minimal supported compiler version.                            |
