@@ -7,6 +7,7 @@ pipeline {
     stages {
         stage("initialize module and setup virtualenv") {
             steps {
+                deleteDir()
                 dir('inmanta-module-template') {
                     checkout scm
                 }
