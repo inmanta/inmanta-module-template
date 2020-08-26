@@ -6,16 +6,18 @@ pipeline {
     }
     stages {
         stage("initialize module and setup virtualenv") {
-            dir('inmanta-module-template') {
-                checkout scm
-            }
-            dir('module') {
-                sh '''
-                    python3 -m ${WORKSPACE}/venv env
-                    ${WORKSPACE}/env/bin/pip install -U pip cookiecutter
-                    cookiecutter --no-input ../inmanta-module-template/
-                    ${WORKSPACE}/env/bin/pip install -r requirements.txt -r requirements.dev.txt
-                '''
+            steps {
+                dir('inmanta-module-template') {
+                    checkout scm
+                }
+                dir('module') {
+                    sh '''
+                        python3 -m ${WORKSPACE}/venv env
+                        ${WORKSPACE}/env/bin/pip install -U pip cookiecutter
+                        cookiecutter --no-input ../inmanta-module-template/
+                        ${WORKSPACE}/env/bin/pip install -r requirements.txt -r requirements.dev.txt
+                    '''
+                }
             }
         }
         stage("tests") {
