@@ -23,7 +23,7 @@
     :license: {{ cookiecutter.license }}
 """
 {%- endif %}
-import pytest
+
 
 def test_basics(project):
     project.compile("""
