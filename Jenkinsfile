@@ -14,7 +14,7 @@ pipeline {
                     sh '''
                         python3 -m venv ${WORKSPACE}/env
                         ${WORKSPACE}/env/bin/pip install -U pip cookiecutter
-                        cookiecutter --no-input ../inmanta-module-template/
+                        ${WORKSPACE}/env/bin/cookiecutter --no-input ../inmanta-module-template/
                         ${WORKSPACE}/env/bin/pip install -r requirements.txt -r requirements.dev.txt
                     '''
                 }
