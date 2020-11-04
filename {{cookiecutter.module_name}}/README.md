@@ -14,7 +14,7 @@ export INMANTA_TEST_ENV=/tmp/env
 export INMANTA_MODULE_REPO=git@github.com:inmanta/
 ```
 
-1. Run tests
+2. Run tests
 
 ```bash
 pytest tests
