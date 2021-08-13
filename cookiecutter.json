@@ -4,6 +4,5 @@
     "author": "Inmanta",
     "author_email": "code@inmanta.com",
     "license": "ASL 2.0",
-    "copyright": "{% now 'local', '%Y' %} Inmanta",
-    "minimal_compiler_version": "2019.3"
+    "copyright": "{% now 'local', '%Y' %} Inmanta"
 }

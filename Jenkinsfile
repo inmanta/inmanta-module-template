@@ -23,6 +23,9 @@ pipeline {
                 }
                 dir('module/test_module') {
                     sh '${WORKSPACE}/env/bin/pip install -r requirements.txt -r requirements.dev.txt'
+                    // `inmanta module install` command is not yet released
+                    sh '${WORKSPACE}/env/bin/pip install -U --pre inmanta-core'
+                    sh '${WORKSPACE}/env/bin/inmanta module install -e'
                 }
             }
         }
