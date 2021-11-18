@@ -4,5 +4,6 @@
     "author": "Inmanta",
     "author_email": "code@inmanta.com",
     "license": "ASL 2.0",
-    "copyright": "{% now 'local', '%Y' %} Inmanta"
+    "copyright": "{% now 'local', '%Y' %} Inmanta",
+    "_extensions": ["cookiecutter.extensions.SlugifyExtension"]
 }
