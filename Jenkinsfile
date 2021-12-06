@@ -41,7 +41,7 @@ pipeline {
         stage("code linting") {
             steps {
                 dir('module/inmanta-module-test-module') {
-                    sh '${WORKSPACE}/env/bin/flake8 plugins tests'
+                    sh '${WORKSPACE}/env/bin/flake8 inmanta_plugins tests'
                 }
             }
         }
