@@ -25,6 +25,7 @@
 {%- endif %}
 from pytest_inmanta.plugin import Project
 
+
 def test_basics(project: Project) -> None:
     project.compile(
         """
