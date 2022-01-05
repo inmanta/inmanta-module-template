@@ -1,4 +1,6 @@
-{%- if cookiecutter.license == "ASL 2.0" -%}
+from pytest_inmanta.plugin import Project
+
+{% if cookiecutter.license == "ASL 2.0" -%}
 """
     Copyright {{ cookiecutter.copyright }}
 
@@ -25,7 +27,7 @@
 {%- endif %}
 
 
-def test_basics(project):
+def test_basics(project: Project) -> None:
     project.compile(
         """
             import {{cookiecutter.module_name}}
