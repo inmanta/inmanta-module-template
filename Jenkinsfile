@@ -19,6 +19,7 @@ pipeline {
                         python3 -m venv ${WORKSPACE}/env
                         ${WORKSPACE}/env/bin/pip install -U pip cookiecutter
                         ${WORKSPACE}/env/bin/cookiecutter --no-input ../inmanta-module-template/
+                        ls
                     '''
                 }
                 dir('module/test-module') {
