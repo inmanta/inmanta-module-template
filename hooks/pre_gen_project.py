@@ -1,7 +1,7 @@
 """
     This script has as purpose to create the Python package name and the 
-    'Inmanta module name' using the module name inputed by the user (or the default module name)
-    The Python package name uses the same naming convention as standart Python packages: 
+    'Inmanta module name' using the module name inputed by the user (or the default module name).
+    The Python package name uses the same naming convention as standard Python packages: 
     all lowercase and words separated by "_".
     The 'Inmanta module name' (which is also the name of the Python module name) uses "-" to separate
     words and can have uppercase letters except for the first letter which is always lowercase.
