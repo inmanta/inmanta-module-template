@@ -1,4 +1,4 @@
-include inmanta_plugins/{{cookiecutter.module_name}}/setup.cfg
-recursive-include inmanta_plugins/{{cookiecutter.module_name}}/model *.cf
-graft inmanta_plugins/{{cookiecutter.module_name}}/files
-graft inmanta_plugins/{{cookiecutter.module_name}}/templates
+include inmanta_plugins/{{cookiecutter.inmanta_module_name}}/setup.cfg
+recursive-include inmanta_plugins/{{cookiecutter.inmanta_module_name}}/model *.cf
+graft inmanta_plugins/{{cookiecutter.inmanta_module_name}}/files
+graft inmanta_plugins/{{cookiecutter.inmanta_module_name}}/templates
