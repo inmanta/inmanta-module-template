@@ -34,6 +34,7 @@ pipeline {
         stage("tests") {
             steps {
                 dir('module/test_module') {
+
                     sh '${WORKSPACE}/env/bin/pytest tests -v -s --junitxml=junit.xml'
                 }
             }
