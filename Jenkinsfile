@@ -19,24 +19,23 @@ pipeline {
                         python3 -m venv ${WORKSPACE}/env
                         ${WORKSPACE}/env/bin/pip install -U pip cookiecutter
                         ${WORKSPACE}/env/bin/cookiecutter --no-input ../inmanta-module-template/
-                        ls
                     '''
                 }
-                dir('module/test_module') {
+                dir('module/test-module') {
                     sh '${WORKSPACE}/env/bin/pip install -r requirements.txt -r requirements.dev.txt'
                 }
             }
         }
         stage("tests") {
             steps {
-                dir('module/test_module') {
+                dir('module/test-module') {
                     sh '${WORKSPACE}/env/bin/pytest tests -v -s --junitxml=junit.xml'
                 }
             }
         }
         stage("code linting") {
             steps {
-                dir('module/test_module') {
+                dir('module/test-module') {
                     sh '${WORKSPACE}/env/bin/flake8 plugins tests'
                 }
             }
