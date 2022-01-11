@@ -29,7 +29,7 @@ from pytest_inmanta.plugin import Project
 def test_basics(project: Project) -> None:
     project.compile(
         """
-            import {{cookiecutter.module_name}}
+            import {{cookiecutter.inmanta_module_name}}
         """
     )
 
