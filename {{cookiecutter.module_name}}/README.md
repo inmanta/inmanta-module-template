@@ -1,4 +1,4 @@
-# {{cookiecutter.module_name}} Module
+# {{cookiecutter.inmanta_module_name}} Module
 
 ## Running tests
 
