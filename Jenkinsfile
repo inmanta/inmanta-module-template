@@ -21,21 +21,21 @@ pipeline {
                         ${WORKSPACE}/env/bin/cookiecutter --no-input ../inmanta-module-template/
                     '''
                 }
-                dir('module/test-module') {
+                dir('module/test_module') {
                     sh '${WORKSPACE}/env/bin/pip install -r requirements.txt -r requirements.dev.txt'
                 }
             }
         }
         stage("tests") {
             steps {
-                dir('module/test-module') {
+                dir('module/test_module') {
                     sh '${WORKSPACE}/env/bin/pytest tests -v -s --junitxml=junit.xml'
                 }
             }
         }
         stage("code linting") {
             steps {
-                dir('module/test-module') {
+                dir('module/test_module') {
                     sh '${WORKSPACE}/env/bin/flake8 plugins tests'
                 }
             }
