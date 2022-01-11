@@ -11,12 +11,12 @@ pip install cookiecutter
 # Usage
 Currently Modules v1 and v2 can be created using the inmanta-module-template.
 
- - To create a v1 module run the following command:
+ - To create a v1 module run:
 ```bash
 cookiecutter --checkout v1 https://github.com/inmanta/inmanta-module-template.git
 ```
 
- - To create a v2 module run the following command:
+ - To create a v2 module run:
 ```bash
 cookiecutter --checkout v2 https://github.com/inmanta/inmanta-module-template.git
 ```
