@@ -18,7 +18,7 @@ cookiecutter --checkout v1 https://github.com/inmanta/inmanta-module-template.gi
 
  - To create a v2 module run:
 ```bash
-cookiecutter --checkout v2 https://github.com/inmanta/inmanta-module-template.git
+cookiecutter https://github.com/inmanta/inmanta-module-template.git
 ```
 
 Both commands will prompt for the template parameters.
