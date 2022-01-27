@@ -1,8 +1,0 @@
-author: {{cookiecutter.author}}
-author_email: {{cookiecutter.author_email}}
-description: {{cookiecutter.module_description}}
-license: {{cookiecutter.license}}
-copyright: {{cookiecutter.copyright}}
-name: {{cookiecutter.module_name}}
-version: 0.0.1
-compiler_version: {{cookiecutter.minimal_compiler_version}}

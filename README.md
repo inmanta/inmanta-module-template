@@ -1,6 +1,6 @@
 # Inmanta module template
 
-A cookiecutter template to create a new Inmanta module.
+A cookiecutter template to create a new V2 Inmanta module.
 
 # Install dependencies
 
@@ -18,7 +18,7 @@ cookiecutter --checkout v1 https://github.com/inmanta/inmanta-module-template.gi
 
  - To create a v2 module run:
 ```bash
-cookiecutter --checkout v2 https://github.com/inmanta/inmanta-module-template.git
+cookiecutter https://github.com/inmanta/inmanta-module-template.git
 ```
 
 Both commands will prompt for the template parameters.
@@ -33,4 +33,3 @@ Both commands will prompt for the template parameters.
 | author_email               | code@inmanta.com            | The e-mail address of the author.                                  |
 | license                    | ASL 2.0                     | The License of this new Inmanta module.                            |
 | copyright                  | ${year} Inmanta             | The owner of the copyright of the project.                         |
-| minimal_compiler_version   | 2019.3                      | The minimal supported compiler version.                            |

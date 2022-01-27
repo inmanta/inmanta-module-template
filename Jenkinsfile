@@ -21,22 +21,27 @@ pipeline {
                         ${WORKSPACE}/env/bin/cookiecutter --no-input ../inmanta-module-template/
                     '''
                 }
-                dir('module/test_module') {
-                    sh '${WORKSPACE}/env/bin/pip install -r requirements.txt -r requirements.dev.txt'
+                dir('module/test-module') {
+                    sh '''
+                        ${WORKSPACE}/env/bin/pip install -r requirements.txt -r requirements.dev.txt
+                        # inmanta-core-6 and pytest-inmanta-2 have not been released yet
+                        PIP_INDEX_URL=https://artifacts.internal.inmanta.com/inmanta/dev ${WORKSPACE}/env/bin/pip install -U --pre inmanta-core pytest-inmanta
+                        ${WORKSPACE}/env/bin/inmanta module install -e
+                    '''
                 }
             }
         }
         stage("tests") {
             steps {
-                dir('module/test_module') {
+                dir('module/test-module') {
                     sh '${WORKSPACE}/env/bin/pytest tests -v -s --junitxml=junit.xml'
                 }
             }
         }
         stage("code linting") {
             steps {
-                dir('module/test_module') {
-                    sh '${WORKSPACE}/env/bin/flake8 plugins tests'
+                dir('module/test-module') {
+                    sh '${WORKSPACE}/env/bin/flake8 inmanta_plugins tests'
                 }
             }
         }
