@@ -1,1 +1,2 @@
+inmanta-core>=6
 inmanta-dev-dependencies[module]
