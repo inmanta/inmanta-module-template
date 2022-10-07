@@ -46,4 +46,9 @@ pipeline {
             }
         }
     }
+    post{
+        cleanup{
+            deleteDir()
+        }
+    }
 }
