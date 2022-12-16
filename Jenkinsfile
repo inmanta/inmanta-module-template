@@ -27,9 +27,6 @@ pipeline {
                         python3 -m venv .env && source .env/bin/activate
                         pip install -r requirements.txt -r requirements.dev.txt
                         inmanta -vvv module install -e .
-                        ${WORKSPACE}/env/bin/pip install -r requirements.txt -r requirements.dev.txt
-                        ${WORKSPACE}/env/bin/pip install -U inmanta-core
-                        ${WORKSPACE}/env/bin/inmanta module install -e
                     '''
                 }
             }
