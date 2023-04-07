@@ -13,9 +13,8 @@ Closes *Add ticket reference here*
 
 Strike through any lines that are not applicable (`~~line~~`) then check the box
 
-- [ ] Issue is referenced by this merge request
-- [ ] Changelog entry
-- [ ] Dev version bump has been made (if applicable) using `inmanta module release` command
+- [ ] [Changelog entry and version bump](https://internal.inmanta.com/development/core/tasks/commiting-changes-modules.html) `inmanta module release --dev [--major|--minor|--patch] [--changelog-message "<your_changelog_message>"]`
+
 - [ ] Code is clear and sufficiently documented (classes, methods and function docs, document important assumptions, link to reference materials)
 - [ ] Sufficient test cases (reproduces the bug/tests the requested feature)
 - [ ] Correct, in line with design
