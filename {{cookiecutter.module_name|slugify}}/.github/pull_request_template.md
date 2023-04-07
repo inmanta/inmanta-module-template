@@ -2,23 +2,24 @@
 
 * Short description here *
 
-Closes *Add ticket reference here*
+closes *Add ticket reference here*
 
-# Merge procedure
+note: to add a changelog entry and bump the version number:
+`inmanta module release --dev [--major|--minor|--patch] [--changelog-message "<your_changelog_message>"]`
 
-Don't use the github built-in merge, but the process described [here](https://docs.internal.inmanta.com/topics/tasks/commiting_changes_modules.html)
+# [Merge procedure](https://internal.inmanta.com/development/core/tasks/commiting-changes-modules.html)
+
+1. merge using the merge button
+2. tag and bump
 
 ```sh
-git pull
 git checkout master
 git pull
-git merge --squash issue/{issue-number}-{short description}
-inmanta module release -m "{Commit Message Here}"
+inmanta module release
 git push
-git push origin {tag} # push the tag as well
+git push {tag} # push the tag as well
 ```
-
-Then close the PR with a reference to the commit
+3. Remove the branch
 
 # Self Check:
 
@@ -30,5 +31,4 @@ Strike through any lines that are not applicable (`~~line~~`) then check the box
 - [ ] Code is clear and sufficiently documented
 - [ ] Sufficient test cases (reproduces the bug/tests the requested feature)
 - [ ] Correct, in line with design
-- [ ] Type annotations
 - [ ] End user documentation is included or an issue is created for end-user documentation (add ref to issue here: )

@@ -14,16 +14,9 @@ Closes *Add ticket reference here*
 Strike through any lines that are not applicable (`~~line~~`) then check the box
 
 - [ ] [Changelog entry and version bump](https://internal.inmanta.com/development/core/tasks/commiting-changes-modules.html) `inmanta module release --dev [--major|--minor|--patch] [--changelog-message "<your_changelog_message>"]`
-
 - [ ] Code is clear and sufficiently documented (classes, methods and function docs, document important assumptions, link to reference materials)
 - [ ] Sufficient test cases (reproduces the bug/tests the requested feature)
 - [ ] Correct, in line with design
 - [ ] Type annotations
 - [ ] Issue is in the review column
 - [ ] MR is assigned to first reviewer
-
-# Useful references
-
-- [Committing changes to Modules](https://internal.inmanta.com/development/core/tasks/commiting-changes-modules.html#committing-changes-to-modules)
-- [`inmanta module release`](https://docs.inmanta.com/community/dev/reference/commands.html#release)
-
