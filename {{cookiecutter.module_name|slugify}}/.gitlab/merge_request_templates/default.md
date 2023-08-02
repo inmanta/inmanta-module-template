@@ -7,7 +7,6 @@ Closes *Add ticket reference here*
 # Reviewers list 
 
 - [ ] reviewer 1
-- [ ] @bart or @wouter
 
 # Self Check:
 
