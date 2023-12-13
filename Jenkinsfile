@@ -26,7 +26,7 @@ pipeline {
                         # follow README instructions exactly
                         python3 -m venv .env && source .env/bin/activate
                         pip install -r requirements.txt -r requirements.dev.txt
-                        inmanta -vvv module install -e .
+                        pip install -e .
                     '''
                 }
             }
