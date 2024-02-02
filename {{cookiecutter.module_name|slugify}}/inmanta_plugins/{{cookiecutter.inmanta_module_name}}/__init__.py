@@ -23,6 +23,7 @@
     :license: {{ cookiecutter.license }}
 """
 {%- endif %}
+
 from inmanta.plugins import plugin
 
 
