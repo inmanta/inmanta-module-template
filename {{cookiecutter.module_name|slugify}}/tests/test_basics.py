@@ -23,6 +23,7 @@
     :license: {{ cookiecutter.license }}
 """
 {%- endif %}
+
 from pytest_inmanta.plugin import Project
 
 
