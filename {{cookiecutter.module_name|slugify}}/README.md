@@ -7,7 +7,7 @@ installed. If you don't, you can replace it with `python3 -m venv .env && source
 
 ```bash
 mkvirtualenv inmanta-test -p python3 -a .
-pip install -e .-c requirements.txt -r requirements.dev.txt
+pip install -e . -c requirements.txt -r requirements.dev.txt
 ```
 
 2. Run tests
