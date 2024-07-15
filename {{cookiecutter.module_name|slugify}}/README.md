@@ -1,4 +1,4 @@
-# {{cookiecutter.inmanta_module_name}} Module
+# {{cookiecutter.inmanta_module_name}} adapter
 
 ## Running tests
 
