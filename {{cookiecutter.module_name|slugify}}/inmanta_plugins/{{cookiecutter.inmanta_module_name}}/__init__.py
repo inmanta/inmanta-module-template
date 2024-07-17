@@ -28,7 +28,7 @@ from inmanta.plugins import plugin
 
 
 @plugin
-def hello(what: "string") -> "string":
+def hello(what: "string") -> "string":  # type: ignore
     """
     Say hello to what
     """
