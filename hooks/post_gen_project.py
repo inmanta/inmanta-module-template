@@ -10,9 +10,9 @@ import subprocess
 
 # if the module is not generated for inmanta internal users, remove some unnecessary files
 REMOVE_PATHS = [
-    '{% if cookiecutter.internal %}.ci-integration-tests.yml{% endif %}',
-    '{% if cookiecutter.internal %}.github/pull_request_template.md{% endif %}',
-    '{% if cookiecutter.internal %}.gitlab/merge_request_templates{% endif %}',
+    '{% if cookiecutter.author_email != "code@inmanta.com" %}.ci-integration-tests.yml{% endif %}',
+    '{% if cookiecutter.author_email != "code@inmanta.com" %}.github/pull_request_template.md{% endif %}',
+    '{% if cookiecutter.author_email != "code@inmanta.com" %}.gitlab/merge_request_templates{% endif %}',
 ]
 
 for path in REMOVE_PATHS:
