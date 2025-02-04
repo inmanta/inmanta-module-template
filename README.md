@@ -33,3 +33,4 @@ Both commands will prompt for the template parameters.
 | author_email               | code@inmanta.com            | The e-mail address of the author.                                  |
 | license                    | ASL 2.0                     | The License of this new Inmanta module.                            |
 | copyright                  | ${year} Inmanta             | The owner of the copyright of the project.                         |
+| internal                   | False                       | Whether the module is generated for inmanta internal employees     |
