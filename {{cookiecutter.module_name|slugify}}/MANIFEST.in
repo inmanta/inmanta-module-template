@@ -3,3 +3,6 @@ include inmanta_plugins/{{cookiecutter.inmanta_module_name}}/py.typed
 recursive-include inmanta_plugins/{{cookiecutter.inmanta_module_name}}/model *.cf
 graft inmanta_plugins/{{cookiecutter.inmanta_module_name}}/files
 graft inmanta_plugins/{{cookiecutter.inmanta_module_name}}/templates
+graft docs
+graft examples
+graft tests
