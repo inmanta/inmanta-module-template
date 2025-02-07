@@ -6,3 +6,5 @@ graft inmanta_plugins/{{cookiecutter.inmanta_module_name}}/templates
 graft docs
 graft examples
 graft tests
+include README.md
+include CHANGELOG.md
