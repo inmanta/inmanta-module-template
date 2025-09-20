@@ -18,7 +18,7 @@ REMOVE_PATHS = [
 for path in REMOVE_PATHS:
     path = path.strip()
     if path and os.path.exists(path):
-        shutil.rmtree(path)
+        os.unlink(path) if os.path.isfile(path) else shutil.rmtree(path)
 
 # don't abort cookiecutter if git is not installed or not configured properly (i.e. no email address configured)
 subprocess.check_call("git init || true", shell=True)
