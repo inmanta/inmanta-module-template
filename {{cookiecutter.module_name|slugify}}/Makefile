@@ -27,7 +27,7 @@ pep8:
 
 SET_UP_MYPY_PLUGINS=mkdir -p mypy/out
 RUN_MYPY_PLUGINS=python -m mypy --namespace-packages -p {{cookiecutter.package_name}}
-RUN_MYPY_TESTS=MYPYPATH=tests python -m mypy --html-report mypy/out/tests --namespace-packages tests
+RUN_MYPY_TESTS=MYPYPATH=tests python -m mypy --html-report mypy/out/tests tests
 
 mypy-plugins:
 	@ echo -e "Running mypy on the module plugins\n..."
