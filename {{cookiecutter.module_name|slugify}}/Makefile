@@ -26,7 +26,7 @@ pep8:
 	$(pyupgrade)
 
 SET_UP_MYPY_PLUGINS=mkdir -p mypy/out
-RUN_MYPY_PLUGINS=python -m mypy --namespace-packages -p {{cookiecutter.package_name}}
+RUN_MYPY_PLUGINS=python -m mypy --namespace-packages -p inmanta_plugins.{{cookiecutter.inmanta_module_name}}
 RUN_MYPY_TESTS=MYPYPATH=tests python -m mypy --html-report mypy/out/tests tests
 
 mypy-plugins:
