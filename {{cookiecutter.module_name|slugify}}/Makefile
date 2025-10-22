@@ -1,4 +1,4 @@
-pyupgrade = pyupgrade --py39-plus $$(find inmanta_plugins tests -type f -name '*.py')
+pyupgrade = pyupgrade --py311-plus $$(find inmanta_plugins tests -type f -name '*.py')
 flake8 = flake8 inmanta_plugins tests 
 black = black inmanta_plugins tests
 black_preview = black --preview inmanta_plugins tests
