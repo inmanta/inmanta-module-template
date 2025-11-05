@@ -21,7 +21,7 @@ pipeline {
                 }
                 dir('module/test-module') {
                     sh '''
-                        python_version=$(curl https://docs.inmanta.com/community/latest/reference/compatibility.json | jq '.system_requirements.python_version')
+                        python_version=$(curl https://docs.inmanta.com/community/latest/reference/compatibility.json | jq -r '.system_requirements.python_version')
                         uv venv --python "$python_version"
                         uv pip install pip
                         source .venv/bin/activate
