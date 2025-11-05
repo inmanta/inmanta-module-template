@@ -16,17 +16,17 @@ pipeline {
                 }
                 dir('module') {
                     sh '''
-                        python3 -m venv ${WORKSPACE}/env
-                        ${WORKSPACE}/env/bin/pip install -U pip cookiecutter
-                        ${WORKSPACE}/env/bin/cookiecutter --no-input ../inmanta-module-template/
+                        uv tool run cookiecutter --no-input ../inmanta-module-template/
                     '''
                 }
                 dir('module/test-module') {
                     sh '''
-                        # follow README instructions exactly
-                        python3 -m venv .env && source .env/bin/activate
-                        pip install -r requirements.txt -r requirements.dev.txt
-                        pip install -e .
+                        python_version=$(curl https://docs.inmanta.com/community/latest/reference/compatibility.json | jq '.system_requirements.python_version')
+                        uv venv --python "$python_version"
+                        uv pip install pip
+                        source .venv/bin/activate
+                        # follow README instructions exactly, except for Python version
+                        pip install -e . -c requirements.txt -r requirements.dev.txt
                     '''
                 }
             }
@@ -34,14 +34,14 @@ pipeline {
         stage("tests") {
             steps {
                 dir('module/test-module') {
-                    sh '.env/bin/pytest tests -v -s --junitxml=junit.xml'
+                    sh '.venv/bin/pytest tests -v -s --junitxml=junit.xml'
                 }
             }
         }
         stage("code linting") {
             steps {
                 dir('module/test-module') {
-                    sh '.env/bin/flake8 inmanta_plugins tests'
+                    sh '.venv/bin/flake8 inmanta_plugins tests'
                 }
             }
         }
